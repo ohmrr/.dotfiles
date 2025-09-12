@@ -28,6 +28,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # zstyle ':completion:*' menu no
 
-alias ls='ls --color'
+alias ls="eza --color --group-directories-first --icons -F"
 
 # eval "$(fzf --zsh)"
+eval "$(/Users/ohmrr/.local/bin/mise activate zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
