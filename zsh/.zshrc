@@ -29,8 +29,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # zstyle ':completion:*' menu no
 
 alias ls="eza --color --group-directories-first --icons -F"
+alias vim="nvim"
 
 # eval "$(fzf --zsh)"
 eval "$(/Users/ohmrr/.local/bin/mise activate zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
+eval "$(starship init zsh)"
