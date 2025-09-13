@@ -1,16 +1,13 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Inserts a blank line between shell prompts
 add_newline = true
 
 format = """
-[┌╴\\(](bold green)[$username@$hostname](bold blue)[\\)](bold green)$os $time\
-| $all[└─](green) $character\
+[┌──](bright-black bold)[\\(](bright-black bold)$username[@](blue bold)$hostname[\\)-\\[$directory](bright-black bold)[\\]](bright-black bold)
+[└─](bright-black bold)$character
 """
 
-[character]
-success_symbol = "💲"
-error_symbol = "✗"
+right_format = "$all"
 
 [username]
 style_user = 'blue bold'
@@ -21,15 +18,15 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '[$ssh_symbol](bold blue)[$hostname](bold blue)'
+format = '[$ssh_symbol](blue bold)[$hostname](blue bold)'
 trim_at = '.companyname.com'
 disabled = false
 
-# No need for env variables as starship provides a way to show your current distro
-[os]
-style = "bold green"
-format = "on [$symbol$arch$name](style)"
+[directory]
+truncate_to_repo = true
+format = '[$path]($style)[$read_only]($read_only_style)'
 
-[os.symbols]
-Windows = "🔷"
-Linux = "🐧"
+[character]
+success_symbol = '[\$](blue bold)'
+error_symbol = '[✗](red bold)'
+
