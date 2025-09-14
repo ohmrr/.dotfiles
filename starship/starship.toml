@@ -2,10 +2,10 @@
 
 add_newline = true
 
-format = """ 
-[┌──](bright-black)[\\(](bright-black)$username[@](blue bold)$hostname[\\)-\\[$directory](bright-black)[\\]](bright-black)
+format = ''' 
+[┌──](bright-black)[\(](bright-black)$username[@](blue bold)$hostname[\)-\[$directory](bright-black)[\]](bright-black)
 [└─](bright-black)$character
-"""
+'''
 
 right_format = '$all'
 
@@ -24,7 +24,9 @@ disabled = false
 
 [directory]
 truncate_to_repo = true
+style = 'white bold'
 format = '[$path]($style)[$read_only]($read_only_style)'
+
 
 [fill]
 symbol = ' '
