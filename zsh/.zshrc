@@ -1,4 +1,7 @@
-unsetopt beep list_beep
+setopt correct
+setopt autocd
+unsetopt beep
+unsetopt list_beep
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"

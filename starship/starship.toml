@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = true
+add_newline = false
 
 format = ''' 
 [┌──](bright-black)[\(](bright-black)$username[@](blue bold)$hostname[\)-\[$directory](bright-black)[\]](bright-black)

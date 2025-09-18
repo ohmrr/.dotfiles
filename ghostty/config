@@ -1,0 +1,10 @@
+theme = Kali
+
+# Text
+font-family = "JetBrains Mono Nerd Font"
+font-size = 15
+font-thicken = true
+
+# Background
+background-opacity = 0.75
+background-blur = true
