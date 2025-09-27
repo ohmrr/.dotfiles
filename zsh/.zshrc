@@ -37,6 +37,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --icons 
 
 alias ls="eza --color --group-directories-first --icons -F"
 alias vim="nvim"
+alias cat="pygmentize -g"
 
 eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
