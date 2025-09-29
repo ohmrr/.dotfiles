@@ -35,9 +35,14 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always --icons --group-directories-first -F $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --icons --group-directories-first -F $realpath'
 
-alias ls="eza --color --group-directories-first --icons -F"
-alias vim="nvim"
-alias cat="pygmentize -g"
+typeset -U config_files
+config_files=($DOTDIR/**/*.zsh)
+
+for file in $config_files; do
+  source $file
+done
+
+unset config_files
 
 eval "$(fzf --zsh)"
 eval "$($HOME/.local/bin/mise activate zsh)"
