@@ -2,9 +2,17 @@ theme = Kali
 
 # Text
 font-family = "JetBrains Mono Nerd Font"
-font-size = 15
+font-size = 16
 font-thicken = true
+bold-color = bright
 
 # Background
 background-opacity = 0.75
 background-blur = true
+
+# Colors
+window-colorspace = display-p3
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
