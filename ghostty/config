@@ -1,4 +1,5 @@
 theme = Kali
+auto-update-channel = tip
 
 # Text
 font-family = "JetBrains Mono Nerd Font"
@@ -8,7 +9,7 @@ bold-color = bright
 
 # Background
 background-opacity = 0.75
-background-blur = true
+background-blur = 30
 
 # Colors
 window-colorspace = display-p3
@@ -16,3 +17,5 @@ window-colorspace = display-p3
 # Cursor
 cursor-style = block
 cursor-style-blink = true
+shell-integration-features = no-cursor
+
