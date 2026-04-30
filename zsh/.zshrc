@@ -23,8 +23,21 @@ zinit ice as"command" from"gh-r" \
   src"init.zsh"
 zinit light ajeetdsouza/zoxide
 
-zinit light zdharma-continuum/fast-syntax-highlighting
 zinit snippet OMZP::sudo
+
+zinit light ALoxaf/fzf-tab
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+
+autoload -Uz compinit
+compinit -d "$ZDOTDIR/cache/.zcompdump"
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always --icons --group-directories-first -F $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --icons --group-directories-first -F $realpath'
 
 alias ls="eza --color --group-directories-first --icons -F"
 alias lst="eza --color --tree --level=2 --group-directories-first --icons -F"
