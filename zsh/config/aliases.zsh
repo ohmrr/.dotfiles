@@ -1,3 +1,3 @@
 alias ls="eza --color --group-directories-first --icons -F"
 alias vim="nvim"
-alias cat="pygmentize -g"
+alias cat="bat"
